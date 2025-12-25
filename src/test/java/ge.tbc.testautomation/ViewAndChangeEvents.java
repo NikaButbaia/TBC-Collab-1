@@ -34,7 +34,7 @@ public class ViewAndChangeEvents {
     }
 
     @Test
-    public void viewEvents() throws InterruptedException{
+    public void viewEventsTest() throws InterruptedException{
         driver.get(URL_1);
 
         waitForElementVisible("//input[@id='email']",10);

@@ -14,6 +14,4 @@ public class Constants {
     public static final String PASSWORD_Register = "Asdfgghh123!";
 
     public static final String NOTIFICATIONS = "Notifications";
-    public static final String URL_3 = "http://35.205.47.8/home";
-
 }

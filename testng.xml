@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EventHub UI Test Suite" verbose="1" parallel="false">
+
+    <test name="UI Tests">
+        <classes>
+            <class name="ge.tbc.testautomation.LogIn"/>
+            <class name="ge.tbc.testautomation.Register"/>
+            <class name="ge.tbc.testautomation.CheckNotifications"/>
+            <class name="ge.tbc.testautomation.ViewAndChangeEvents"/>
+        </classes>
+    </test>
+
+</suite>
