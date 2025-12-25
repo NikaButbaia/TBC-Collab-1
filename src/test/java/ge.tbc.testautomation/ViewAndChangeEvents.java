@@ -45,6 +45,9 @@ public class ViewAndChangeEvents {
         WebElement passwordInput = driver.findElement(By.xpath("//p-password//input"));
         passwordInput.sendKeys(PASSWORD);
 
+        WebElement rememberMe = driver.findElement(By.xpath("//label[text()='Remember me']"));
+        rememberMe.click();
+
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
         loginButton.click();
         Thread.sleep(1000);
@@ -57,8 +60,8 @@ public class ViewAndChangeEvents {
         WebElement eventsViewAll = driver.findElement(By.xpath("//a[@routerlink='/events']"));
         eventsViewAll.click();
 
-        waitForElementVisible("//label[contains(normalize-space(text()), 'Gamarjoba gng')]",10);
-        WebElement filterCheckbox = driver.findElement(By.xpath("//label[contains(normalize-space(text()), 'Gamarjoba gng')]"));
+        waitForElementVisible("//label[contains(normalize-space(text()), 'Lab 2')]",10);
+        WebElement filterCheckbox = driver.findElement(By.xpath("//label[contains(normalize-space(text()), 'Lab 2')]"));
         filterCheckbox.click();
 
         waitForElementClickable("//div[@class='p-card-body']",10);
