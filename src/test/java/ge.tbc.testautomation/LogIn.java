@@ -21,6 +21,14 @@ public class LogIn {
     @BeforeClass
     public void setUp(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--remote-allow-origins=*");
+
+
+        options.addArguments("--user-data-dir=/tmp/chrome-profile-" + System.currentTimeMillis());
 
         String profileDir = "C:\\temp\\chrome-profile-cors-" + System.currentTimeMillis();
         options.addArguments("--user-data-dir=" + profileDir);
