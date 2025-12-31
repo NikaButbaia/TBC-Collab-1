@@ -32,6 +32,7 @@ public class CheckNotifications {
         options.addArguments("--remote-allow-origins=*");
 
         driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
     }
     @Test
     public void checkNotifications() throws InterruptedException {
@@ -45,12 +46,19 @@ public class CheckNotifications {
         WebElement passwordInput = driver.findElement(By.xpath("//p-password//input"));
         passwordInput.sendKeys(PASSWORD);
 
+        WebElement rememberMe = driver.findElement(By.xpath("//label[text()='Remember me']"));
+        rememberMe.click();
+
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
         loginButton.click();
         Thread.sleep(1000);
 
-        waitForElementClickable("//button[@class='notification-btn']", 10);
-        WebElement notificationButton = driver.findElement(By.xpath("//button[@class='notification-btn']"));
+        waitForElementClickable("//button[@class='p-toast-close-button']",10);
+        WebElement loginX = driver.findElement(By.xpath("//button[@class='p-toast-close-button']"));
+        loginX.click();
+
+        waitForElementClickable("//button[contains(@class,'notification-btn')]", 10);
+        WebElement notificationButton = driver.findElement(By.xpath("//button[contains(@class,'notification-btn')]"));
         notificationButton.click();
 
         waitForElementVisible("//h1[@class='notifications-title']", 10);

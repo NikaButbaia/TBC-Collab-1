@@ -60,8 +60,8 @@ public class ViewAndChangeEvents {
         WebElement eventsViewAll = driver.findElement(By.xpath("//a[@routerlink='/events']"));
         eventsViewAll.click();
 
-        waitForElementVisible("//label[contains(normalize-space(text()), 'Lab 2')]",10);
-        WebElement filterCheckbox = driver.findElement(By.xpath("//label[contains(normalize-space(text()), 'Lab 2')]"));
+        waitForElementVisible("//label[contains(normalize-space(text()), 'Online')]",10);
+        WebElement filterCheckbox = driver.findElement(By.xpath("//label[contains(normalize-space(text()), 'Online')]"));
         filterCheckbox.click();
 
         waitForElementClickable("//div[@class='p-card-body']",10);
@@ -69,7 +69,7 @@ public class ViewAndChangeEvents {
         clickEvent.click();
 
         waitForElementVisible("//button[@class='register-btn p-button p-component ng-star-inserted']",10);
-        WebElement registerButton = driver.findElement(By.xpath("//button[@class='register-btn p-button p-component ng-star-inserted']"));
+        WebElement registerButton = driver.findElement(By.xpath("//button[@class='register-btn ng-star-inserted p-button p-component']"));
         registerButton.click();
     }
 
