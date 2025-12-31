@@ -27,6 +27,7 @@ public class CheckNotifications {
 
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
+        options.addArguments("--window-size=1920,1080");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
         options.addArguments("--remote-allow-origins=*");
